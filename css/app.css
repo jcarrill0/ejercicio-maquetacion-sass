@@ -12,7 +12,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  font-family: sans-serif; }
+  font-family: "Arial"; }
 
 h1, h2, h3 {
   margin: 0; }
@@ -30,6 +30,9 @@ h1, h2, h3 {
   transition: all .5s ease-out; }
   .nav-item:hover {
     background-color: #EE583F; }
+
+.active {
+  background-color: #EE583F; }
 
 .nav-link {
   text-decoration: none;
@@ -58,9 +61,6 @@ h1, h2, h3 {
       .header .header__menu .header__logo {
         justify-content: start;
         flex: 0; } }
-    .header .header__menu .header__logo .header__logo-img {
-      width: 70px;
-      height: 70px; }
     .header .header__menu .header__logo .header__brand {
       font-size: 1.7rem; }
 
