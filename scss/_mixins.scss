@@ -1,0 +1,32 @@
+
+
+@mixin box-sizing($box-model) {
+    box-sizing: $box-model;
+}
+
+@mixin box($color) {
+    margin-bottom: 1rem;
+    width: 250px;
+    height: 150px;
+    background-color: $color;
+}
+
+/* Media Queries */
+
+@mixin telefono{
+    @media only screen and (min-width: #{$telefono}) {
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media only screen and (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media only screen and (min-width: #{$desktop}) {
+        @content;
+    }
+}

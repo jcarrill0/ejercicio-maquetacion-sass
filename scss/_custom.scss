@@ -1,0 +1,145 @@
+html {
+    @include box-sizing(border-box);
+}
+
+*, 
+*::after,
+*::before {
+    @include box-sizing(inherit);
+}
+
+body {
+    font-family: $font-primary;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.nav-list {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+}
+
+.nav-item {
+    flex: 1;
+    list-style: none;
+    padding: 1rem;
+    text-align: center;
+    transition: all .5s ease-out;
+    &:hover {
+        background-color: $red-secondary;    
+    } 
+}
+
+.nav-link {
+    text-decoration: none;
+    color: $white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: $orange;
+    .header__menu {
+        @include desktop {
+            padding: 0;
+            display: flex;
+            justify-content: space-between;  
+            align-items: center; 
+        }
+        .header__logo {
+            padding: 1rem 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+            @include desktop {
+                justify-content: start;
+                flex: 0;
+            }
+            .header__logo-img {
+                width: 70px;
+                height: 70px;
+            }
+            .header__brand {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+
+.header__nav {
+    background-color: $red-primary;
+    margin: 0;
+    @include desktop {
+        flex: 0 1 50%;
+    }
+}
+
+.wrapper-main {
+    @include desktop {
+        display: flex;
+        gap: 1.5rem;
+        height: 74vh;
+    }
+}
+
+.main {
+    .main__article {
+        margin: 1.5rem;
+        @include desktop {
+            margin: 1.5rem 0;
+        }
+        .blockquote__text {
+            border-left: 4px solid rgb(224, 222, 222);
+            padding-left: 1.5rem;
+        }
+    }
+}
+
+.sidebar {
+    display: none;
+    @include desktop {
+        display: block;
+        background-color: $green;
+        padding: 1.5rem;
+        .sidebar__article {
+            @include box($orange);
+        }   
+    }
+}
+
+.footer {
+    background-color: $orange;
+    .footer__wrapper {
+        padding: 1.2rem 2.5rem;
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer__social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .nav-link {
+                padding: 1rem;
+                text-align: center;
+                background-color: $orange-secondary;
+                &:hover {
+                    background-color: $red-secondary;
+                }
+            }
+        }
+    }
+}
+
+.footer__nav {
+    background-color: $red-primary;
+    margin: 0;
+}
