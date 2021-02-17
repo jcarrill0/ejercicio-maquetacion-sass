@@ -81,10 +81,10 @@ h1, h2, h3 {
   background-color: white;
   padding: 0 1rem; }
   .main .main__article {
-    margin: 1.5rem; }
+    padding: 1.5rem; }
     @media only screen and (min-width: 1024px) {
       .main .main__article {
-        margin: 1.5rem 0; } }
+        padding: 1.5rem 0 0 0; } }
     .main .main__article .blockquote__text {
       border-left: 4px solid #F0F0F0;
       padding-left: 1.5rem; }
