@@ -4,12 +4,13 @@ html {
 
 *, 
 *::after,
-*::before {
+*::before { 
     @include box-sizing(inherit);
 }
 
 body {
     font-family: $font-primary;
+    background-color: $gray;
 }
 
 h1, h2, h3 {
@@ -51,7 +52,7 @@ h1, h2, h3 {
     background-color: $orange;
     .header__menu {
         @include desktop {
-            padding: 0;
+            padding: 0 1rem;
             display: flex;
             justify-content: space-between;  
             align-items: center; 
@@ -85,19 +86,20 @@ h1, h2, h3 {
 .wrapper-main {
     @include desktop {
         display: flex;
-        gap: 1.5rem;
-        height: 74vh;
+        height: 76vh;
     }
 }
 
 .main {
+    background-color: $white;
+    padding: 0 1rem;
     .main__article {
         margin: 1.5rem;
         @include desktop {
             margin: 1.5rem 0;
         }
         .blockquote__text {
-            border-left: 4px solid rgb(224, 222, 222);
+            border-left: 4px solid $gray;
             padding-left: 1.5rem;
         }
     }
@@ -118,7 +120,7 @@ h1, h2, h3 {
 .footer {
     background-color: $orange;
     .footer__wrapper {
-        padding: 1.2rem 2.5rem;
+        padding: 1.2rem 1rem;
         @include desktop {
             display: flex;
             justify-content: space-between;
